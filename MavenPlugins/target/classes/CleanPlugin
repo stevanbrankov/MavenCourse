@@ -1,0 +1,25 @@
+- if refactoring has been done, those old compiled artifacts will be there (target folder); they will still be
+picked up on your class path -> and weird stuff may happen -> to avoid it, run clean goal
+
+- phases are hooks to run plugins
+
+- example:
+- during initialize phase, maven-clean-plugin will run clean goal
+
+   <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>auto-clean</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
