@@ -1,0 +1,8 @@
+- be aware of rule, that just those classes will be picked by surefire plugin
+
+    .**/Test*.java
+    **/*Test.java
+    **/*Tests.java
+    **/*TestCase.java
+
+- used for running tests
