@@ -1,0 +1,27 @@
+-if this is being add, classpath will be added to MANIFEST.MF and jar will be executable
+  <plugin>
+    <artifactId>maven-jar-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <mainClass>HelloWorld</mainClass>
+          </manifest>
+        </archive>
+    </configuration>
+  </plugin>
+
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven 3.6.1
+Built-By: Jean Pierre
+Build-Jdk: 11.0.5
+
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven 3.6.1
+Built-By: Jean Pierre
+Build-Jdk: 11.0.5
+Class-Path: commons-lang3-3.8.1.jar
+Main-Class: HelloWorld
+
