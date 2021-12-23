@@ -1,0 +1,11 @@
+ <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.6</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+</properties>
+
+- if we compile it like this, bytecode will be changed to java 6
+
+- if compile is run as goal, <build> won't be triggered, but if we run compile phase, it will be triggered
