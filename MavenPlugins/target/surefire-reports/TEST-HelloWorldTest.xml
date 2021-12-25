@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="HelloWorldTest" time="0.006" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="HelloWorldTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.5+10-b520.17"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Maven\MavenCourse"/>
+    <property name="user.dir" value="D:\Maven\MavenCourse\MavenPlugins"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="11.0.5+10-b520.17"/>
     <property name="user.script.format" value="Cyrl"/>
@@ -48,7 +48,7 @@
     <property name="java.class.path" value="E:\Java\IntelliJ IDEA Community Edition 2019.3.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.3.1 package"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.3.1 test"/>
     <property name="java.home" value="E:\Java\IntelliJ IDEA Community Edition 2019.3.1\jbr"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -66,6 +66,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="HelloWorldTest" name="HelloWorldTest.testHello" time="0.006"/>
-  <testcase classname="HelloWorldTest" name="HelloWorldTest.testWorld" time="0"/>
+  <testcase classname="HelloWorldTest" name="HelloWorldTest.testWorld" time="0.002"/>
+  <testcase classname="HelloWorldTest" name="HelloWorldTest.testHello" time="0"/>
 </testsuite>

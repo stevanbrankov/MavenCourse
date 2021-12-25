@@ -1,4 +1,9 @@
--if this is being add, classpath will be added to MANIFEST.MF and jar will be executable
+-if this is being add, classpath will be added to MANIFEST.MF and jar will be executable -> java -jar MavenPlugins-1.0-SNAPSHOT.jar
+-if this down is not present (at least <mainClass>) jar won't be executable
+-if <addClasspath> is present it will add classpath which consists of references of JAR files in maven local repo (pom) ->
+if you want to execute those jar (with dependencies), that jar should be added to target folder (in this case)
+
+--**--
   <plugin>
     <artifactId>maven-jar-plugin</artifactId>
       <configuration>
@@ -11,17 +16,18 @@
     </configuration>
   </plugin>
 
-Manifest-Version: 1.0
-Archiver-Version: Plexus Archiver
-Created-By: Apache Maven 3.6.1
-Built-By: Jean Pierre
-Build-Jdk: 11.0.5
+  Manifest-Version: 1.0
+  Archiver-Version: Plexus Archiver
+  Created-By: Apache Maven 3.6.1
+  Built-By: Jean Pierre
+  Build-Jdk: 11.0.5
+  Class-Path: commons-lang3-3.8.1.jar
+  Main-Class: HelloWorld
+--**--
 
 Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
 Created-By: Apache Maven 3.6.1
 Built-By: Jean Pierre
 Build-Jdk: 11.0.5
-Class-Path: commons-lang3-3.8.1.jar
-Main-Class: HelloWorld
 
