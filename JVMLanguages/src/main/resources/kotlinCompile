@@ -1,0 +1,53 @@
+*** https://github.com/groovy/groovy-eclipse/wiki/Groovy-Eclipse-Maven-plugin
+*** https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all/3.0.9
+
+- version from groovy-eclipse-batch should match groovy version
+- steps:
+1) set repository -> by default maven will lock at maven central repo:
+
+    <pluginRepositories>
+      <pluginRepository>
+        <id>groovy-plugins-release</id>
+        <url>https://groovy.jfrog.io/artifactory/plugins-release</url>
+      </pluginRepository>
+      ...
+    </pluginRepositories>
+
+2) set configuration:
+    <build>
+        ...
+        <plugins>
+          <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version><!-- 3.6.2 is the minimum -->
+            <configuration>
+              <compilerId>groovy-eclipse-compiler</compilerId>
+              <compilerArguments>
+                <indy/><!-- optional; supported by batch 2.4.12-04+ -->
+                <configScript>config.groovy</configScript><!-- optional; supported by batch 2.4.13-02+ -->
+              </compilerArguments>
+            </configuration>
+            <dependencies>
+              <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-eclipse-compiler</artifactId>
+                <version>3.7.1</version>
+              </dependency>
+              <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-eclipse-batch</artifactId>
+                <version>3.0.9-03</version>
+              </dependency>
+            </dependencies>
+          </plugin>
+        </plugins>
+        ...
+    </build>
+
+3) dependency for groovy:
+    <dependency>
+        <groupId>org.codehaus.groovy</groupId>
+        <artifactId>groovy-all</artifactId>
+        <version>3.0.9</version>
+        <type>pom</type>
+    </dependency>
